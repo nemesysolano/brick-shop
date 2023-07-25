@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://postgres.local:5432/brickshop
+    username: postgres
+    password: password
+    driverClassName: org.postgresql.Driver
+
+logging: #https://www.baeldung.com/spring-boot-logging
+  level:
+    com.brickshop.services.*: DEBUG
