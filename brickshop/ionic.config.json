@@ -1,0 +1,7 @@
+{
+  "name": "brickshop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
