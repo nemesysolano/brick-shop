@@ -12,9 +12,9 @@ import Container from '@mui/material/Container';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { AppBar, Copyright, Drawer, DrawerMenu } from '../../components/onpage';
 import { defaultTheme } from '../../pages/Theme';
 import './WithNavigator.css';
+import { AppBar, Copyright, Drawer, DrawerMenu } from './elements';
 
 export const WithNavigator: React.FC<React.PropsWithChildren> = (props: React.PropsWithChildren) => {
   const [open, setOpen] = React.useState(true);

@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 import "./Plain.css"
-import { Copyright } from '../../components/onpage';
 import { defaultTheme } from '../../pages/Theme';
+import { Copyright } from './elements';
 
 /* https://blog.logrocket.com/using-react-children-prop-with-typescript/ */
 
