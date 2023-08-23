@@ -7,8 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { SignIn } from './pages';
-import Lobby from './pages/lobby/Lobby';
+import { SignIn, Lobby } from './pages';
 
 const router = createBrowserRouter([
   {

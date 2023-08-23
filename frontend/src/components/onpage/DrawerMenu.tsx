@@ -1,19 +1,19 @@
 import React from 'react';
 import { ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Category from '@mui/icons-material/Category';
+import ReceiptLong from '@mui/icons-material/ReceiptLong';
 
 export const DrawerMenu:React.FC = () => (
     <React.Fragment>
     <ListItemButton>
       <ListItemIcon>
-        <DashboardIcon />
+        <Category />
       </ListItemIcon>
       <ListItemText primary="Catalog" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <ReceiptLong />
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItemButton>
