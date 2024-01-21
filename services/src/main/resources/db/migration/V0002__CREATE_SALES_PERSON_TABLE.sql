@@ -1,6 +1,6 @@
 
 create table SALES_PERSON (
-	id bigserial not null,
+	id bigint not null,
 	name varchar(64) not null,
 	ship_address_street varchar(128) not NULL,
 	ship_address_city varchar(128) not NULL,

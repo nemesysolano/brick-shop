@@ -1,5 +1,5 @@
 create table product (
-	id bigserial not null,
+	id bigint not null,
 	name varchar(64) not null,
 	onhand integer not null,
 	picture text not NULL,

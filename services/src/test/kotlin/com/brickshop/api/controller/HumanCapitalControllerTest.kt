@@ -3,6 +3,7 @@ package com.brickshop.api.controller
 import com.brickshop.ServicesApplication
 import com.brickshop.model.Product
 import com.brickshop.model.SalesPerson
+import com.brickshop.model.SalesPersonPerformanceReport
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import org.junit.jupiter.api.Assertions
@@ -63,5 +64,20 @@ class HumanCapitalControllerTest {
         )
 
         logger.debug(salesPerson.toString())
+    }
+
+    @Test
+    @DisplayName("/human-capital/quarterly-report/{id}")
+    fun quaterlyReport() {
+        val salesPersonPerformanceReport: SalesPersonPerformanceReport = jasonMapper.readValue(
+            mvc.get("/human-capital/quarterly-report/1")
+                .andExpect { MockMvcResultMatchers.status().isOk() }
+                .andDo { MockMvcResultHandlers.print() }
+                .andReturn()
+                .response
+                .contentAsString,
+        )
+
+        logger.debug(salesPersonPerformanceReport.toString())
     }
 }
