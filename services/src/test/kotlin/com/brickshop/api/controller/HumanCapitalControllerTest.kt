@@ -1,10 +1,11 @@
-package com.brickshop.services.controller
+package com.brickshop.api.controller
 
-import com.brickshop.services.ServicesApplication
-import com.brickshop.services.model.Product
+import com.brickshop.ServicesApplication
+import com.brickshop.model.Product
+import com.brickshop.model.SalesPerson
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -13,7 +14,6 @@ import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
-
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.context.web.WebAppConfiguration
 import org.springframework.test.web.servlet.MockMvc
@@ -26,19 +26,19 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 @WebAppConfiguration
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @AutoConfigureMockMvc
-class ProductCatalogControllerTest {
-    var logger = LoggerFactory.getLogger(ProductCatalogControllerTest::class.java)
+class HumanCapitalControllerTest {
+    var logger = LoggerFactory.getLogger(HumanCapitalControllerTest::class.java)
 
     @Autowired
     lateinit var mvc: MockMvc
-
     val jasonMapper = jacksonObjectMapper()
 
+
     @Test
-    @DisplayName("/product/all")
-    fun testAllProducts() {
-        val products:List<Product> = jasonMapper.readValue(
-            mvc.get("/product/all")
+    @DisplayName("/human-capital/all")
+    fun testAllSalesPeople() {
+        val salesPeople:List<SalesPerson> = jasonMapper.readValue(
+            mvc.get("/human-capital/all")
                 .andExpect { MockMvcResultMatchers.status().isOk() }
                 .andReturn()
                 .response
@@ -46,15 +46,15 @@ class ProductCatalogControllerTest {
         )
 
 
-        assertFalse(products.isEmpty())
-        logger.debug("${products.size} products retrieved!")
+        Assertions.assertFalse(salesPeople.isEmpty())
+        logger.debug("${salesPeople.size} products retrieved!")
     }
 
     @Test
-    @DisplayName("/product/{id}")
-    fun productByIdSuccess() {
-        val product:Product = jasonMapper.readValue(
-            mvc.get("/product/1")
+    @DisplayName("/human-capital/{id}")
+    fun salesPersonByIdSuccess() {
+        val salesPerson: SalesPerson = jasonMapper.readValue(
+            mvc.get("/human-capital/1")
                 .andExpect { MockMvcResultMatchers.status().isOk() }
                 .andDo { MockMvcResultHandlers.print() }
                 .andReturn()
@@ -62,7 +62,6 @@ class ProductCatalogControllerTest {
                 .contentAsString,
         )
 
-        logger.debug(product.toString())
+        logger.debug(salesPerson.toString())
     }
-
 }

@@ -1,4 +1,9 @@
 spring:
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    validateOnMigrate: true
+    locations: classpath:db/migration
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -6,9 +11,9 @@ spring:
       ddl-auto: validate
   datasource:
     platform: postgres
-    url: jdbc:postgresql://postgres.local:5432/brickshop
+    url: jdbc:postgresql://postgres:5432/brickshop
     username: postgres
-    password: password
+    password: postgres
     driverClassName: org.postgresql.Driver
 
 logging: #https://www.baeldung.com/spring-boot-logging

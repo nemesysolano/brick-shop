@@ -1,6 +1,6 @@
-package com.brickshop.services.api
+package com.brickshop.api
 
-import com.brickshop.services.model.Product
+import com.brickshop.model.Product
 
 interface ProductCatalog {
     fun allProducts() : Iterable<Product>

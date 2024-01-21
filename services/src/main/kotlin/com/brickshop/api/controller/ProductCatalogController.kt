@@ -1,8 +1,8 @@
-package com.brickshop.services.controller
+package com.brickshop.api.controller
 
-import com.brickshop.services.api.ProductCatalog
-import com.brickshop.services.api.impl.ProductCatalogService
-import com.brickshop.services.model.Product
+import com.brickshop.api.ProductCatalog
+import com.brickshop.api.service.ProductCatalogService
+import com.brickshop.model.Product
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping

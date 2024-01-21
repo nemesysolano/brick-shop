@@ -1,4 +1,4 @@
-package com.brickshop.services.model
+package com.brickshop.model
 import jakarta.persistence.*
 import java.math.BigDecimal
 

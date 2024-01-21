@@ -1,4 +1,4 @@
-package com.brickshop.services
+package com.brickshop
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

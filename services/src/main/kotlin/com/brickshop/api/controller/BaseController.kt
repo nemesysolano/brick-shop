@@ -1,6 +1,6 @@
-package com.brickshop.services.controller
+package com.brickshop.api.controller
 
-import com.brickshop.services.exception.RESTServiceException
+import com.brickshop.exception.RESTServiceException
 import org.springframework.http.HttpStatus
 
 open class BaseController {

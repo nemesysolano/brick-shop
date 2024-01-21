@@ -1,4 +1,4 @@
-package com.brickshop.services.exception
+package com.brickshop.exception
 
 import org.springframework.http.HttpStatus
 import java.lang.RuntimeException

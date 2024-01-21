@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.brickshop"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
@@ -27,6 +27,8 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.+")
 	implementation("org.postgresql:postgresql")
+	implementation("org.flywaydb:flyway-core")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

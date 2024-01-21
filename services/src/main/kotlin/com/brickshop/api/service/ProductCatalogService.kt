@@ -1,8 +1,8 @@
-package com.brickshop.services.api.impl
+package com.brickshop.api.service
 
-import com.brickshop.services.api.ProductCatalog
-import com.brickshop.services.model.Product
-import com.brickshop.services.repository.ProductRepository
+import com.brickshop.api.ProductCatalog
+import com.brickshop.model.Product
+import com.brickshop.repository.ProductRepository
 import org.springframework.stereotype.Service
 
 @Service
